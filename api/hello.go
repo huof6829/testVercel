@@ -7,6 +7,7 @@ import (
 
 func Hello(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello World!\n")
-	fmt.Fprintf(w, "r.url:%+v\n", r.URL)
+	fmt.Fprintf(w, "r.url:%+v, host:%+v\n", r.URL.Path, r.Host)
+	fmt.Fprintf(w, "r:%+v\n", r)
 
 }
